@@ -45,13 +45,5 @@ contract testSuite {
         uint256 targetBalance = tokenContract.balanceOf(acc1);
         Assert.ok(targetBalance == 100, 'should be balance true');
     }
-    
-    /// #sender: account-2
-    function shouldNotStakeMoreThanOwning() public payable {
-        tokenContract.stake(1000);
-        
-        uint256 amountStaked = tokenContract.stakeOf();
-        Assert.ok(amountStaked == 1000, 'should be stake true');
-    }
 
 }
